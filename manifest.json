@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Konzum Unit Price Sorter",
+  "version": "1.0",
+  "description": "Adds sorting by unit price (cijena za j.m.) on Konzum product pages",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.konzum.hr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.konzum.hr/web/search*",
+        "*://*.konzum.hr/web/t/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "konzum.png",
+    "96": "konzum.png",
+    "128": "konzum.png"
+  }
+}
